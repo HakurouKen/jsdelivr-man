@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "jsdelivr-man",
+  "version": "1.0.0",
+  "description": "Auto redirect github raw files to jsdelivr.",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

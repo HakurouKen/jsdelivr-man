@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://cdn.jsdelivr.net/gh/\\1/\\2@\\3/\\4.min.\\5"
+      }
+    },
+    "condition": {
+      "regexFilter": "https?://(?:cdn\\.rawgit\\.com|raw\\.githubusercontent\\.com)/([^/]+)/([^/]+)/([^/]+)/(.*)\\.(js|mjs|css)$",
+      "isCaseSensitive": false,
+      "resourceTypes": ["script", "stylesheet"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://cdn.jsdelivr.net/gh/\\1/\\2@\\3/\\4"
+      }
+    },
+    "condition": {
+      "regexFilter": "https?://(?:cdn\\.rawgit\\.com|raw\\.githubusercontent\\.com)/([^/]+)/([^/]+)/([^/]+)/(.*)$",
+      "isCaseSensitive": false,
+      "resourceTypes": ["script", "stylesheet", "main_frame", "sub_frame"]
+    }
+  }
+]
