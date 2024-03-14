@@ -1,3 +1,3 @@
 # JSDELIVR-MAN
 
-Auto-replace github raw files to jsdelivr.
+Auto redirect github raw files to jsdelivr.
